@@ -20,7 +20,12 @@
         
         function loadText(){
             var xhrCall = new XMLHttpRequest();
+           
+            
+            xhrCall.open('GET', 'file1.txt', true);
             console.log(xhrCall);
+            xhrCall.send();
+            
         }
         
     </script>
