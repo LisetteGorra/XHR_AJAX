@@ -23,8 +23,19 @@
            
             
             xhrCall.open('GET', 'file1.txt', true);
-            console.log(xhrCall);
-            xhrCall.send();
+            
+          
+            
+            xhrCall.onload = function() {
+              
+                    var data = (this.responseText);
+                    console.log(data);
+                    
+            }
+                xhrCall.send();
+                
+                console.log(xhrCall);
+            
             
         }
         
