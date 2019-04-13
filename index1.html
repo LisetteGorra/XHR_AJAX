@@ -21,15 +21,16 @@
         function loadText(){
             var xhrCall = new XMLHttpRequest();
            
+            var url = "https://api.github.com/users";
             
-            xhrCall.open('GET', 'file1.txt', true);
+            xhrCall.open('GET', url, true);
             
           
             
             xhrCall.onload = function() {
               
-                    var data = (this.responseText);
-                    console.log(data);
+                    var objectData = JSON.parse(this.responseText);
+                    console.log(objectData[0]);
                     
             }
                 xhrCall.send();
